@@ -31,8 +31,6 @@
         right: 0;
     }
 
-
-
     .container {
         max-width: 400px;
         margin: 0 auto;
@@ -41,13 +39,10 @@
         border: 1px solid #ccc;
         border-radius: 5px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
-
     }
 
     .container h2 {
         text-align: center;
-
     }
 
     .container input[type="text"],
@@ -61,9 +56,6 @@
 
     }
 
-
-
-
     .txt2 {
         font-size: 14px;
         margin-top: 15px;
@@ -72,28 +64,19 @@
 
     .btn-dangnhap {
         background-color: #80ff80;
-        /* Màu nền */
         color: #000;
-        /* Màu chữ */
         border: none;
-        /* Loại bỏ viền */
         padding: 10px 155px;
-        /* Kích thước nút */
         border-radius: 10px;
-        /* Bo góc nút */
         cursor: pointer;
-        /* Biến con trỏ chuột thành dấu nhấp nháy */
         font-size: 15px;
-
     }
     </style>
 </head>
 
 <body>
 <div class="wrapper1">
-        
-            <p class="header">Bonny Hotel</p>
-                 
+            <p class="header">Bonny Hotel</p>    
 <div class="container">
         <?php 
     if(isset( $_POST['dangnhap'])){ 
