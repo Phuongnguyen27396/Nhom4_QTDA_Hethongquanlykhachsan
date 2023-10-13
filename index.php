@@ -1,8 +1,4 @@
 
-
-
-
-
 <!DOCTYPE html>
 <html>
 
@@ -22,85 +18,102 @@
     <title>Đăng nhập</title>
     <style>
     body {
-        font-family: Arial, sans-serif;
-        background-color: #D9D9D9; ;
+       
+      
         position: absolute;
         top: 20%;
-        bottom: 0;
-        left: 0;
-        right: 0;
+        
+        /*background-image: url('/image/bony.jpg'); */
     }
-
-
 
     .container {
-        max-width: 400px;
+        max-width: 750px;
         margin: 0 auto;
-        padding: 20px;
-        background-color: #fff;
-        border: 1px solid #ccc;
-        border-radius: 5px;
+        padding: 150px;
+      
+        border-radius: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
-
+        background-color: rgba(255, 255, 255, 0.95);
+        margin-top: -990px;
+        margin-left: 750px;
+        position: absolute;
+        text-align: 70px ;
+        font-size: 18px;
+        
+        
     }
 
-    .container h2 {
+    .container h2 { /* đăng nhập đầu á*/
         text-align: center;
+        font-size: 28px;
+        
 
     }
 
     .container input[type="text"],
+    
     .container input[type="password"] {
-        width: 90%;
-        padding: 10px;
-        margin-bottom: 15px;
+        width: 140%;
+        padding: 20px;
+        margin-bottom: 10px;
         border: 1px solid #ccc;
-        border-radius: 3px;
-        border-radius: 10px;
+        margin-left: -100px;
+        border-radius: 100px;
 
     }
-
-
 
 
     .txt2 {
-        font-size: 14px;
-        margin-top: 15px;
-        margin-left: 25px;
+        font-size: 50px;
+        margin-top: 100px;
+        margin-left: 50px;
     }
 
-    .btn-dangnhap {
-        background-color: #80ff80;
+    .btn-dangnhap {   /* cái này là nút nhấn đăng nhập nha*/
+        background: linear-gradient(to bottom, #36A4BC, #fff);
         /* Màu nền */
-        color: #000;
+        color: #fff;
         /* Màu chữ */
         border: none;
         /* Loại bỏ viền */
-        padding: 10px 155px;
+        padding: 5px 290px;
         /* Kích thước nút */
-        border-radius: 10px;
+        border-radius: 25px;
         /* Bo góc nút */
         cursor: pointer;
         /* Biến con trỏ chuột thành dấu nhấp nháy */
-        font-size: 15px;
+        font-size: 20px;
+        margin-left: -100px;
+        
+        
 
     }
+    
+
     </style>
 </head>
 
 <body>
-<div class="wrapper1">
-        
-            <p class="header">Bonny Hotel</p>
-                 
-<div class="container">
-        <?php 
+<div class="phan1">
+<img class="iconoirflower" alt="" src="/image/bieutuong.PNG" />
+<img class="iconoirflower1" alt="" src="/image/dannhap.PNG" />
+
+</div>
+
+    
+    
+<div class="image-container">
+        <img class="image" src="image/bony.jpg" alt="Mô tả hình ảnh">
+
+    <div class="container">
+    
+        <?php
+         $error_message = ''; // Biến để lưu thông báo lỗi 
     if(isset( $_POST['dangnhap'])){ 
       $email = $_POST['email'];
       $password = $_POST['password'];
       if($email == '1' && $password == '1'){
-        header('Location:index123.php');
+        header('Location:data.php?action=data&query=them');
       }elseif($email == '2' && $password == '2'){
         header('Location:manager.php');
     }elseif($email == '3' && $password == '3'){
@@ -109,29 +122,37 @@
         header('Location:collaborators.php'); 
         
       }else{
-        echo" Tài khoản hoặc Mật khẩu không chính xác";
+        header('Location:fix.php'); 
       }
     }
   ?>
-        <h2>Đăng nhập</h2>
+
+
+   
+
+
+        <h2  style="  margin-top: -50px;padding: 20px;  " > Đăng nhập</h2>
+        
         <form id="from_reg" action="index.php" method="post">
-            <label> Email </label>
+            <label>Tên đăng nhập </label>
             <input type="text" name="email">
 
-            <label>Password</label>
+            <label>Mật khẩu</label>
             <input type="password" name="password">
 
-            <button type="submit" name="dangnhap" class="btn-dangnhap"> Đăng nhập</button>
+            <button type="submit" name="dangnhap" class="btn-dangnhap"> ĐĂNG NHẬP</button>
         </form>
 
-
-        <div class="text-center p-t-70 txt2">
-            Trang web quản lý dữ liệu <i class="far fa-copyright" aria-hidden="true"></i>
-            <a class="txt2" href="https://www.facebook.com/phuongnguyendang123/"> Code bởi phuong Nguyen</a>
-        </div>
+        
+    
+    </div> 
+    </div>
     </div>
 
+    
 </body>
 
-
 </html>
+
+
+
